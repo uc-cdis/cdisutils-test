@@ -44,14 +44,14 @@ values = {
                             }
                         ],
                         "creationDate": "Thu, 30 Mar 2017 15:24:17 +0000",
-                        "email": null,
-                        "enabled": true,
+                        "email": None,
+                        "enabled": True,
                         "id": 72,
-                        "keystoneDomain": null,
-                        "managerLocale": null,
+                        "keystoneDomain": None,
+                        "managerLocale": None,
                         "name": "ResponseSuccess",
                         "organization": 1,
-                        "privateAccountEnabled": false,
+                        "privateAccountEnabled": False,
                         "roles": [
                             {
                                 "role": "admin"
@@ -75,7 +75,7 @@ values = {
                                 ]
                             }
                         ],
-                        "timezone": null,
+                        "timezone": None,
                         "type": "local",
                         "username": "testUsername",
                         "uuid": "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEEE"
@@ -120,14 +120,14 @@ values = {
                             }
                         ],
                         "creationDate": "Thu, 30 Mar 2017 15:24:17 +0000",
-                        "email": null,
-                        "enabled": true,
+                        "email": None,
+                        "enabled": True,
                         "id": 12,
-                        "keystoneDomain": null,
-                        "managerLocale": null,
+                        "keystoneDomain": None,
+                        "managerLocale": None,
                         "name": "KeyPairErrorUser",
                         "organization": 1,
-                        "privateAccountEnabled": false,
+                        "privateAccountEnabled": False,
                         "roles": [
                             {
                                 "role": "admin"
@@ -151,7 +151,7 @@ values = {
                                 ]
                             }
                         ],
-                        "timezone": null,
+                        "timezone": None,
                         "type": "local",
                         "username": "testUsername",
                         "uuid": "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEEE"
@@ -230,11 +230,11 @@ values = {
                         "allowedIps": [],
                         "anonymousAccessPermission": "disabled",
                         "creationDate": "Mon, 22 Aug 2016 14:18:30 +0000",
-                        "deleteRestricted": false,
+                        "deleteRestricted": False,
                         "description": "this is a test Vaul",
-                        "extentEnabled": false,
-                        "externalAccessHost": null,
-                        "fileSystem": null,
+                        "extentEnabled": False,
+                        "externalAccessHost": None,
+                        "fileSystem": None,
                         "generations": [
                             {
                                 "seq": 0,
@@ -247,14 +247,14 @@ values = {
                         "hardQuota": 1099511627776,
                         "id": 274,
                         "ida": "fec",
-                        "largeObjectEnabled": true,
-                        "lockedVaultEnabled": false,
+                        "largeObjectEnabled": True,
+                        "lockedVaultEnabled": False,
                         "name": "testVaultName",
-                        "nameIndexEnabled": true,
+                        "nameIndexEnabled": True,
                         "privacyAlgorithm": "aont-rc4-128",
-                        "privacyEnabled": true,
-                        "readThreshold": null,
-                        "recoveryListingEnabled": false,
+                        "privacyEnabled": True,
+                        "readThreshold": None,
+                        "recoveryListingEnabled": False,
                         "segmentSize": 4194304,
                         "softQuota": 879609302220,
                         "storageHealth": "ok",
@@ -296,14 +296,14 @@ values = {
                             }
                         ],
                         "creationDate": "Thu, 30 Mar 2017 15:24:17 +0000",
-                        "email": null,
-                        "enabled": true,
+                        "email": None,
+                        "enabled": True,
                         "id": 95,
-                        "keystoneDomain": null,
-                        "managerLocale": null,
+                        "keystoneDomain": None,
+                        "managerLocale": None,
                         "name": "KeyPairUser",
                         "organization": 1,
-                        "privateAccountEnabled": false,
+                        "privateAccountEnabled": False,
                         "roles": [
                             {
                                 "role": "admin"
@@ -327,7 +327,7 @@ values = {
                                 ]
                             }
                         ],
-                        "timezone": null,
+                        "timezone": None,
                         "type": "local",
                         "username": "testUsername",
                         "uuid": "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEEE"

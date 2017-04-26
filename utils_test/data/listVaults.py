@@ -5,7 +5,7 @@ values = {
             "vaults": [
                 {
                     "alertLevel": 8,
-                    "allotmentQuota": null,
+                    "allotmentQuota": None,
                     "allotmentUsage": 676824033300480,
                     "allottedSize": 2198827008,
                     "allowedIps": [],
@@ -14,15 +14,15 @@ values = {
                     "estimateObjectCount": 20,
                     "estimateUsableTotalLogicalSizeFromStorage": 576578734612479,
                     "estimateUsableUsedLogicalSizeFromStorage": 1202370930,
-                    "hardQuota": null,
+                    "hardQuota": None,
                     "id": 1,
                     "name": "Testforreal",
                     "numGenerations": 1,
-                    "privacyEnabled": true,
-                    "readThreshold": null,
-                    "regionFormatEnabled": true,
+                    "privacyEnabled": True,
+                    "readThreshold": None,
+                    "regionFormatEnabled": True,
                     "segmentSize": 4194304,
-                    "softQuota": null,
+                    "softQuota": None,
                     "storagePools": [
                         {
                             "storagePool": {
@@ -55,7 +55,7 @@ values = {
                     "writeThreshold": 7
                 },                {
                     "alertLevel": 8,
-                    "allotmentQuota": null,
+                    "allotmentQuota": None,
                     "allotmentUsage": 676824033300480,
                     "allottedSize": 0,
                     "allowedIps": [],
@@ -64,15 +64,15 @@ values = {
                     "estimateObjectCount": 0,
                     "estimateUsableTotalLogicalSizeFromStorage": 576577513041919,
                     "estimateUsableUsedLogicalSizeFromStorage": 0,
-                    "hardQuota": null,
+                    "hardQuota": None,
                     "id": 2,
                     "name": "whateverName",
                     "numGenerations": 1,
-                    "privacyEnabled": true,
-                    "readThreshold": null,
-                    "regionFormatEnabled": true,
+                    "privacyEnabled": True,
+                    "readThreshold": None,
+                    "regionFormatEnabled": True,
                     "segmentSize": 4194304,
-                    "softQuota": null,
+                    "softQuota": None,
                     "storagePools": [
                         {
                             "storagePool": {
@@ -106,7 +106,7 @@ values = {
                 },
                 {
                     "alertLevel": 8,
-                    "allotmentQuota": null,
+                    "allotmentQuota": None,
                     "allotmentUsage": 676824033300480,
                     "allottedSize": 0,
                     "allowedIps": [],
@@ -115,15 +115,15 @@ values = {
                     "estimateObjectCount": 0,
                     "estimateUsableTotalLogicalSizeFromStorage": 576577513041919,
                     "estimateUsableUsedLogicalSizeFromStorage": 0,
-                    "hardQuota": null,
+                    "hardQuota": None,
                     "id": 274,
                     "name": "testVaultName",
                     "numGenerations": 1,
-                    "privacyEnabled": true,
-                    "readThreshold": null,
-                    "regionFormatEnabled": true,
+                    "privacyEnabled": True,
+                    "readThreshold": None,
+                    "regionFormatEnabled": True,
                     "segmentSize": 4194304,
-                    "softQuota": null,
+                    "softQuota": None,
                     "storagePools": [
                         {
                             "storagePool": {
@@ -157,7 +157,7 @@ values = {
                 },
                 {
                     "alertLevel": 8,
-                    "allotmentQuota": null,
+                    "allotmentQuota": None,
                     "allotmentUsage": 676824033300480,
                     "allottedSize": 14206058496,
                     "allowedIps": [],
@@ -166,15 +166,15 @@ values = {
                     "estimateObjectCount": 723,
                     "estimateUsableTotalLogicalSizeFromStorage": 576585405296639,
                     "estimateUsableUsedLogicalSizeFromStorage": 7867593305,
-                    "hardQuota": null,
+                    "hardQuota": None,
                     "id": 3,
                     "name": "testdata3",
                     "numGenerations": 1,
-                    "privacyEnabled": true,
-                    "readThreshold": null,
-                    "regionFormatEnabled": true,
+                    "privacyEnabled": True,
+                    "readThreshold": None,
+                    "regionFormatEnabled": True,
                     "segmentSize": 4194304,
-                    "softQuota": null,
+                    "softQuota": None,
                     "storagePools": [
                         {
                             "storagePool": {

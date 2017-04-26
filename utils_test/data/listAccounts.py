@@ -12,14 +12,14 @@ values = {
                         }
                     ],
                     "creationDate": "Thu, 11 Aug 2016 18:19:48 +0000",
-                    "email": null,
-                    "enabled": true,
+                    "email": None,
+                    "enabled": True,
                     "id": 72,
-                    "keystoneDomain": null,
-                    "managerLocale": null,
+                    "keystoneDomain": None,
+                    "managerLocale": None,
                     "name": "ResponseSuccess",
                     "organization": 1,
-                    "privateAccountEnabled": false,
+                    "privateAccountEnabled": False,
                     "roles": [
                         {
                             "role": "vaultUser",
@@ -31,28 +31,28 @@ values = {
                             ]
                         }
                     ],
-                    "timezone": null,
+                    "timezone": None,
                     "type": "local",
-                    "username": null,
+                    "username": None,
                     "uuid": "PINGAPINGAPINGAPINGAPINGAPINGAPINGA"
                 },
                 {
                     "accessKeys": [],
                     "creationDate": "Mon, 28 Dec 2015 21:01:49 +0000",
-                    "email": null,
-                    "enabled": true,
+                    "email": None,
+                    "enabled": True,
                     "id": 1,
-                    "keystoneDomain": null,
-                    "managerLocale": null,
+                    "keystoneDomain": None,
+                    "managerLocale": None,
                     "name": "ResponseError",
                     "organization": 1,
-                    "privateAccountEnabled": false,
+                    "privateAccountEnabled": False,
                     "roles": [
                         {
                             "role": "admin"
                         }
                     ],
-                    "timezone": null,
+                    "timezone": None,
                     "type": "local",
                     "username": "admin",
                     "uuid": "HARHARHARHARHARHARHARHARHHARDY"
@@ -66,14 +66,14 @@ values = {
                         }
                     ],
                     "creationDate": "Sun, 02 Apr 2017 19:44:55 +0000",
-                    "email": null,
-                    "enabled": true,
+                    "email": None,
+                    "enabled": True,
                     "id": 95,
-                    "keystoneDomain": null,
-                    "managerLocale": null,
+                    "keystoneDomain": None,
+                    "managerLocale": None,
                     "name": "KeyPairUser",
                     "organization": 1,
-                    "privateAccountEnabled": false,
+                    "privateAccountEnabled": False,
                     "roles": [
                         {
                             "role": "vaultUser",
@@ -85,7 +85,7 @@ values = {
                             ]
                         }
                     ],
-                    "timezone": null,
+                    "timezone": None,
                     "type": "local",
                     "username": "perico",
                     "uuid": "PONGPONGPONGPONGPONGPONGPONGPONGPONGPONG"
@@ -98,14 +98,14 @@ values = {
                         }
                     ],
                     "creationDate": "Sun, 02 Apr 2017 19:44:55 +0000",
-                    "email": null,
-                    "enabled": true,
+                    "email": None,
+                    "enabled": True,
                     "id": 14,
-                    "keystoneDomain": null,
-                    "managerLocale": null,
+                    "keystoneDomain": None,
+                    "managerLocale": None,
                     "name": "KeyPairCreationUser",
                     "organization": 1,
-                    "privateAccountEnabled": false,
+                    "privateAccountEnabled": False,
                     "roles": [
                         {
                             "role": "vaultUser",
@@ -117,7 +117,7 @@ values = {
                             ]
                         }
                     ],
-                    "timezone": null,
+                    "timezone": None,
                     "type": "local",
                     "username": "perico",
                     "uuid": "PONGPONGPONGPONGPONGPONGPONGPONGPONGPONG"
@@ -131,14 +131,14 @@ values = {
                         }
                     ],
                     "creationDate": "Sun, 02 Apr 2017 19:44:55 +0000",
-                    "email": null,
-                    "enabled": true,
+                    "email": None,
+                    "enabled": True,
                     "id": 95,
-                    "keystoneDomain": null,
-                    "managerLocale": null,
+                    "keystoneDomain": None,
+                    "managerLocale": None,
                     "name": "KeyPairUser",
                     "organization": 1,
-                    "privateAccountEnabled": false,
+                    "privateAccountEnabled": False,
                     "roles": [
                         {
                             "role": "vaultUser",
@@ -150,7 +150,7 @@ values = {
                             ]
                         }
                     ],
-                    "timezone": null,
+                    "timezone": None,
                     "type": "local",
                     "username": "perico",
                     "uuid": "PONGPONGPONGPONGPONGPONGPONGPONGPONGPONG"
@@ -164,14 +164,14 @@ values = {
                         }
                     ],
                     "creationDate": "Mon, 22 Aug 2016 16:11:11 +0000",
-                    "email": null,
-                    "enabled": true,
+                    "email": None,
+                    "enabled": True,
                     "id": 12,
-                    "keystoneDomain": null,
-                    "managerLocale": null,
+                    "keystoneDomain": None,
+                    "managerLocale": None,
                     "name": "KeyPairErrorUser",
                     "organization": 1,
-                    "privateAccountEnabled": false,
+                    "privateAccountEnabled": False,
                     "roles": [
                         {
                             "role": "vaultUser",
@@ -183,9 +183,9 @@ values = {
                             ]
                         }
                     ],
-                    "timezone": null,
+                    "timezone": None,
                     "type": "local",
-                    "username": null,
+                    "username": None,
                     "uuid": "d530ed44-56f5-45bb-a228-0871de9b06c2"
                 }
             ]
