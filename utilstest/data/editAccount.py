@@ -1,5 +1,5 @@
 values = {
-    "id=72&vaultUserPermissions%5B2%5D=readOnly&rolesMap%5BvaultProvisioner%5D=true": {
+    "id=72&vaultUserPermissions%5B2%5D=readOnly": {
         "status_code": "200",
         "text": {
             "responseData": {},
@@ -11,7 +11,7 @@ values = {
             "responseStatus": "ok"
         }
     },
-"vaultUserPermissions%5B274%5D=disable&id=95&rolesMap%5BvaultProvisioner%5D=true": {
+"vaultUserPermissions%5B274%5D=disable&id=95": {
         "status_code": "200",
         "text": {
             "responseData": {},
@@ -23,7 +23,7 @@ values = {
             "responseStatus": "ok"
         }
     },
-"vaultUserPermissions%5B274%5D=disable&id=12&rolesMap%5BvaultProvisioner%5D=true": {
+"vaultUserPermissions%5B274%5D=disable&id=12": {
         "status_code": "200",
         "text": {
             "responseData": {},
@@ -35,7 +35,7 @@ values = {
             "responseStatus": "ok"
         }
     },
-"vaultUserPermissions%5B274%5D=readOnly&id=72&rolesMap%5BvaultProvisioner%5D=true": {
+"vaultUserPermissions%5B274%5D=readOnly&id=72": {
         "status_code": "200",
         "text": {
             "responseData": {},
@@ -47,7 +47,7 @@ values = {
             "responseStatus": "ok"
         }
     },
-"vaultUserPermissions%5B274%5D=readOnly&id=14&rolesMap%5BvaultProvisioner%5D=true": {
+"vaultUserPermissions%5B274%5D=readOnly&id=14": {
         "status_code": "500",
         "text": {
             "responseData": {},
