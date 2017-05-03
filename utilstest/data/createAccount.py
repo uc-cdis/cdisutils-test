@@ -1,5 +1,5 @@
 values = {
-"usingPassword=false&name=testUserToBeDeleted&rolesMap%5Boperator%5D=true":{
+"usingPassword=false&name=testUserToBeDeleted":{
         "status_code": "200",
         "text": {
             "responseData": {
@@ -13,7 +13,7 @@ values = {
             "responseStatus": "ok"
         }
     },
-"usingPassword=false&name=ErroredUser&rolesMap%5Boperator%5D=true":{
+"usingPassword=false&name=ErroredUser":{
         "status_code": "400",
         "text": {
             "responseData": {
