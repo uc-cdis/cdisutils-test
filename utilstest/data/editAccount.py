@@ -11,7 +11,7 @@ values = {
             "responseStatus": "ok"
         }
     },
-"vaultUserPermissions%5B274%5D=disable&id=95": {
+"vaultUserPermissions%5B274%5D=disabled&id=95": {
         "status_code": "200",
         "text": {
             "responseData": {},
@@ -23,7 +23,7 @@ values = {
             "responseStatus": "ok"
         }
     },
-"vaultUserPermissions%5B274%5D=disable&id=12": {
+"vaultUserPermissions%5B274%5D=disabled&id=12": {
         "status_code": "200",
         "text": {
             "responseData": {},
