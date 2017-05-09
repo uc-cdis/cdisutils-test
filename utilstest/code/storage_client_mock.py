@@ -155,7 +155,7 @@ class StorageClientMocker(object):
         except NotFoundError:
             mock_key = "XXXXXXXXXX"
             mock_secret = "YYYYYYYYYYYYYYYYYY"
-            return self.create_bucket(name, mock_key, mock_secret)
+            return self.create_bucket(mock_key, mock_secret, name)
 
     def create_bucket(self, access_key, secret_key, name):
         """
