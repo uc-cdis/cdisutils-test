@@ -10,6 +10,15 @@ from storageclient.base import User, Bucket
 from storageclient.errors import NotFoundError, RequestError
 
 
+def get_client(config, backend):
+    if backend == 'cleversafe':
+        return StorageClientMocker(backend)
+    else:
+        raise NotImplementedError()
+
+def check_auth_positive(cls, backend, user):
+    return True
+
 class StorageClientMocker(object):
     """
     This class will contain the methods and
@@ -17,7 +26,7 @@ class StorageClientMocker(object):
     supposed to be modifiable by the very calls
     it is mocking
     """
-    def __init__(self, provider, users={}, bucket={}, permisions={}):
+    def __init__(self, provider, users={}, buckets={}, permisions={}):
         """
         users = {'Name1': User1, 'Name2': User2...}
         buckets = {'Name1': Bucket1, 'Name2': Bucket2...}
@@ -54,10 +63,7 @@ class StorageClientMocker(object):
         """
         Tries to retrieve a user from the dict
         """
-        try:
-            return self.users[name]
-        except KeyError:
-            raise NotFoundError("User not found")
+        return self.users[name]
 
     def list_bucket(self, backend):
         """
@@ -101,7 +107,7 @@ class StorageClientMocker(object):
         Deletes all keypairs from a user
         """
         try:
-            self.users[name].keys = {}
+            self.users[name].keys = []
         except KeyError:
             raise NotFoundError("The user doesn't exist")
 
@@ -139,7 +145,7 @@ class StorageClientMocker(object):
         except KeyError:
             return self.create_user(name)
 
-    def get_or_create_bucket(self, backend, bucket):
+    def get_or_create_bucket(self, name):
         """
         Tries to get a bucket and if it fails
         creates a new one
@@ -155,7 +161,7 @@ class StorageClientMocker(object):
         """
         Create a user and insert it in our dictionary
         """
-        if not name in self.bucket.keys():
+        if not name in self.buckets.keys():
             self.bucket_counter += 1
             bucket = Bucket(name, self.bucket_counter, 1024)
             self.buckets[name] = bucket
