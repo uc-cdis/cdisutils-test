@@ -58,5 +58,17 @@ values = {
             },
             "responseStatus": "ok"
         }
+    },
+"vaultUserPermissions%5B274%5D=disabled&id=72": {
+        "status_code": "200",
+        "text": {
+            "responseData": {},
+            "responseHeader": {
+                "now": 1492630700324,
+                "requestId": "WPe8rAoQgF4AADVcyb0AAAAv",
+                "status": "ok"
+            },
+            "responseStatus": "ok"
+        }
     }
 }

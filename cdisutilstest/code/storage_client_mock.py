@@ -16,9 +16,6 @@ def get_client(config, backend):
     else:
         raise NotImplementedError()
 
-def check_auth_positive(cls, backend, user):
-    return True
-
 class StorageClientMocker(object):
     """
     This class will contain the methods and
