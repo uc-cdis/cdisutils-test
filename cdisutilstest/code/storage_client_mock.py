@@ -154,7 +154,7 @@ class StorageClientMocker(object):
             mock_secret = "YYYYYYYYYYYYYYYYYY"
             return self.create_bucket(mock_key, mock_secret, name)
 
-    def create_bucket(self, access_key, secret_key, name):
+    def create_bucket(self, name, access_key=None, secret_key=None):
         """
         Create a user and insert it in our dictionary
         """
