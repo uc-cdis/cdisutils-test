@@ -80,7 +80,7 @@ class StorageClientMocker(object):
         else:
             raise RequestError("User already exists", 400)
 
-    def delete_user(self, user):
+    def delete_user(self, name):
         """
         Removes a user from the list
         """
@@ -154,7 +154,7 @@ class StorageClientMocker(object):
             mock_secret = "YYYYYYYYYYYYYYYYYY"
             return self.create_bucket(mock_key, mock_secret, name)
 
-    def create_bucket(self, access_key, secret_key, name):
+    def create_bucket(self, name, access_key=None, secret_key=None):
         """
         Create a user and insert it in our dictionary
         """
@@ -163,7 +163,7 @@ class StorageClientMocker(object):
             bucket = Bucket(name, self.bucket_counter, 1024)
             self.buckets[name] = bucket
         else:
-            raise RequestError("Bucket name created", 400)
+            raise RequestError("Bucket name already exists", 400)
 
     def edit_bucket_template(self, template_id, **kwargs):
         """
