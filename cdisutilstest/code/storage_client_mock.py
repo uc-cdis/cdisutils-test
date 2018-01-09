@@ -54,13 +54,13 @@ class StorageClientMocker(object):
         try:
             return bucket in self.users[username].permissions.keys()
         except KeyError:
-            raise NotFoundException("User not found")
+            raise NotFoundError("User not found")
 
     def get_user(self, name):
         """
         Tries to retrieve a user from the dict
         """
-        return self.users[name]
+        return self.users.get(name)
 
     def list_bucket(self, backend):
         """
@@ -137,10 +137,7 @@ class StorageClientMocker(object):
         Try to get a user and if it fails
         creates a new one
         """
-        try:
-            return self.get_user(name)
-        except KeyError:
-            return self.create_user(name)
+        return self.get_user(name) or self.create_user(name)
 
     def get_or_create_bucket(self, name):
         """
@@ -152,7 +149,7 @@ class StorageClientMocker(object):
         except NotFoundError:
             mock_key = "XXXXXXXXXX"
             mock_secret = "YYYYYYYYYYYYYYYYYY"
-            return self.create_bucket(mock_key, mock_secret, name)
+            return self.create_bucket(name, mock_key, mock_secret)
 
     def create_bucket(self, name, access_key=None, secret_key=None):
         """
@@ -196,6 +193,22 @@ class StorageClientMocker(object):
             raise NotFoundError("Bucket not found")
         else:
             self.users[user].permissions[bucket]=access
+
+    def delete_bucket_acl(self, bucket, user):
+        """
+        Remove user's permission from a bucket
+        Args:
+            bucket (str): bucket name
+            user (str): user name
+        Returns:
+            None
+        """
+        if not bucket in self.buckets.keys():
+            raise NotFoundError("Bucket not found")
+        elif not user in self.users.keys():
+            raise NotFoundError("Bucket not found")
+        else:
+            self.users[user].permissions[bucket]=[]
 
     def delete_bucket(self, bucket_name):
         try:
