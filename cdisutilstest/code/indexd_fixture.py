@@ -54,7 +54,7 @@ class MockServer(object):
         self.baseurl = 'http://localhost:{}'.format(port)
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def indexd_server():
     port = 8001
     indexd = Process(target=run_indexd, args=[port])
