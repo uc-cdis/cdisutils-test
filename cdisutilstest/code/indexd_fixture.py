@@ -60,11 +60,7 @@ def indexd_server():
     indexd = Process(target=run_indexd, args=[port])
     indexd.start()
     wait_for_indexd_alive(port)
-    try:
-        yield MockServer(port=port, auth=create_user('admin', 'admin'))
-    except Exception:
-        yield "Fail to setup indexd"
-    finally:
-        indexd.terminate()
-        remove_sqlite_files()
-        wait_for_indexd_not_alive(port)
+    yield MockServer(port=port, auth=create_user('admin', 'admin'))
+    indexd.terminate()
+    remove_sqlite_files()
+    wait_for_indexd_not_alive(port)
