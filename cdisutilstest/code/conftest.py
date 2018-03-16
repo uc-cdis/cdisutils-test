@@ -2,7 +2,7 @@ from multiprocessing import Process
 
 import pytest
 
-from indexd_fixture import (IndexClient, MockServer, create_user,
+from .indexd_fixture import (IndexClient, MockServer, create_user,
                             remove_sqlite_files, run_indexd,
                             wait_for_indexd_alive, wait_for_indexd_not_alive)
 
