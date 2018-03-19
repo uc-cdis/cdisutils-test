@@ -2,9 +2,15 @@ from multiprocessing import Process
 
 import pytest
 
-from indexd_fixture import (IndexClient, MockServer, create_user,
+from .indexd_fixture import (IndexClient, MockServer, create_user,
                             remove_sqlite_files, run_indexd,
                             wait_for_indexd_alive, wait_for_indexd_not_alive)
+# Note the . in front of indexd_fixtures for more information:
+# https://stackoverflow.com/questions/16981921/relative-imports-in-python-3#16985066
+# Basically the options are:
+# 1) Use setuptools for this repo
+# 2) Some terrible looking relative imports
+# 3)
 
 
 @pytest.fixture(scope='session')
