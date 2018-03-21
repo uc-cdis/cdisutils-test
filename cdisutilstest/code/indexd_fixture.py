@@ -7,6 +7,9 @@ from indexd import get_app
 from indexd.default_settings import settings
 
 from indexclient.client import IndexClient
+from indexd.index.drivers.alchemy import Base as index_base
+from indexd.auth.drivers.alchemy import Base as auth_base
+from indexd.alias.drivers.alchemy import Base as alias_base
 
 
 def wait_for_indexd_alive(port):
@@ -39,6 +42,7 @@ def create_user(username, password, settings_key='auth'):
     driver.add(username, password)
     return (username, password)
 
+
 # TODO use tmpdir
 def remove_sqlite_files():
     files = ['alias.sq3', 'index.sq3', 'auth.sq3']
@@ -47,8 +51,27 @@ def remove_sqlite_files():
             os.remove(f)
 
 
+def setup_database():
+    index_base.metadata.create_all()
+    alias_base.metadata.create_all()
+    auth_base.metadata.create_all()
+
+
+def clear_database():
+    with settings['config']['INDEX']['driver'].session as session:
+        for model in index_base.__subclasses__():
+            session.query(model).delete()
+
+    with settings['config']['ALIAS']['driver'].session as session:
+        for model in alias_base.__subclasses__():
+            session.query(model).delete()
+
+    with settings['auth'].session as session:
+        for model in auth_base.__subclasses__():
+            session.query(model).delete()
+
+
 class MockServer(object):
-    def __init__(self, port, auth):
+    def __init__(self, port):
         self.port = port
-        self.auth = auth
         self.baseurl = 'http://localhost:{}'.format(port)
