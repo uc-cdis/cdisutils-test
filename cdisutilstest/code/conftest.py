@@ -11,7 +11,6 @@ from .indexd_fixture import (IndexClient, MockServer, create_user,
 # Basically the options are:
 # 1) Use setuptools for this repo
 # 2) Some terrible looking relative imports
-# 3)
 
 
 @pytest.fixture(scope='session')
@@ -19,7 +18,8 @@ def indexd_server():
     """
     Starts the indexd server, and cleans up its mess.
     Most tests will use the client which stems from this
-    sever fixture. Runs once per test session.
+    server fixture.
+    Runs once per test session.
     """
     port = 8001
     indexd = Process(target=run_indexd, args=[port])
@@ -33,8 +33,10 @@ def indexd_server():
 @pytest.fixture(scope='function')
 def indexd_client(indexd_server):
     """
-    Returns a IndexClient. This will delete any documents
-    made by this client after the test has completed.
+    Returns a IndexClient. This will delete any documents,
+    aliases, or users made by this
+    client after the test has completed.
+    Currently the default user is the admin user
     Runs once per test.
     """
     setup_database()
