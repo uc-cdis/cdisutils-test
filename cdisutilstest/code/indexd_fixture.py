@@ -123,7 +123,7 @@ def create_random_index_version(index_client, did, version_did=None, version=Non
         version_did (str): did for the version to be created
         version (str): version number for the version to be created
     Returns:
-        Document: the ducument just created
+        Document: the document just created
     """
     md5_hasher = hashlib.md5()
     md5_hasher.update(did.encode("utf-8"))
@@ -142,4 +142,4 @@ def create_random_index_version(index_client, did, version_did=None, version=Non
     if version:
         data["version"] = version
 
-    return index_client.add_version(did, Document(None. None, data))
+    return index_client.add_version(did, Document(None, None, data))
