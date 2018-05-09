@@ -81,7 +81,7 @@ class MockServer(object):
         self.baseurl = 'http://localhost:{}'.format(port)
 
 
-def create_random_index(index_client, did=None, version=None):
+def create_random_index(index_client, did=None, version=None, hashes=None):
     """
     Shorthand for creating new index entries for test purposes.
     Note:
@@ -91,23 +91,27 @@ def create_random_index(index_client, did=None, version=None):
         passed from actual test functions
         did (str): if specified use as document did, else allow indexd to create one
         version (str): version of the index being added
+        hashes (dict): hashes to store on the index, if not specified a random one is created
     Returns:
         indexclient.client.Document: the document jsut created
     """
 
     did = str(uuid.uuid4()) if did is None else did
 
-    md5_hasher = hashlib.md5()
-    md5_hasher.update(did.encode("utf-8"))
-    hashes = {'md5': md5_hasher.hexdigest()}
+    if not hashes:
+        md5_hasher = hashlib.md5()
+        md5_hasher.update(did.encode("utf-8"))
+        hashes = {'md5': md5_hasher.hexdigest()}
 
     doc = index_client.create(
         did=did,
         hashes=hashes,
         size=random.randint(10, 1000),
         version=version if version else "",
-        file_name=did + "_super_indexed_razzmatazz.xtx",
-        urls=["s3://cleversafe.com/{}_warning_huge_file.svs".format(did)]
+        acl=["a", "b"],
+        file_name="{}_warning_huge_file.svs".format(did),
+        urls=["s3://super-safe.com/{}_warning_huge_file.svs".format(did)],
+        urls_metadata={"s3://super-safe.com/{}_warning_huge_file.svs".format(did): {"a", "b"}}
     )
 
     return doc
@@ -128,17 +132,21 @@ def create_random_index_version(index_client, did, version_did=None, version=Non
     md5_hasher = hashlib.md5()
     md5_hasher.update(did.encode("utf-8"))
     file_name = did
+
+    data = {}
     if version_did:
+        data["did"] = version_did
         file_name += version_did
         md5_hasher.update(version_did.encode("utf-8"))
-    data = {
-        "did": version_did,
-        "size": random.randint(10, 1000),
-        "hashes": {"md5": md5_hasher.hexdigest()},
-        "urls": ["s3://super-safe.com/{}_warning_huge_file.svs".format(file_name)],
-        "form": "object",
-        "file_name": "{}_warning_huge_file.svs".format(file_name)
-    }
+
+    data["acl"] = ["ax", "bx"]
+    data["size"] = random.randint(10, 1000)
+    data["hashes"] = {"md5": md5_hasher.hexdigest()}
+    data["urls"] = ["s3://super-safe.com/{}_warning_huge_file.svs".format(file_name)]
+    data["form"] = "object"
+    data["file_name"] = "{}_warning_huge_file.svs".format(file_name)
+    data["urls_metadata"] = {"s3://super-safe.com/{}_warning_huge_file.svs".format(did): {"a": "b"}}
+
     if version:
         data["version"] = version
 
