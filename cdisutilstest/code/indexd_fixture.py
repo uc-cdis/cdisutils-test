@@ -111,7 +111,7 @@ def create_random_index(index_client, did=None, version=None, hashes=None):
         acl=["a", "b"],
         file_name="{}_warning_huge_file.svs".format(did),
         urls=["s3://super-safe.com/{}_warning_huge_file.svs".format(did)],
-        urls_metadata={"s3://super-safe.com/{}_warning_huge_file.svs".format(did): {"a", "b"}}
+        urls_metadata={"s3://super-safe.com/{}_warning_huge_file.svs".format(did): {"a": "b"}}
     )
 
     return doc
