@@ -89,11 +89,11 @@ def create_random_index(index_client, did=None, version=None, hashes=None):
     Args:
         index_client (indexclient.client.IndexClient): pytest fixture for index_client
         passed from actual test functions
-        did (str): if specified use as document did, else allow indexd to create one
+        did (str): if specified it will be used as document did, else allows indexd to create one
         version (str): version of the index being added
         hashes (dict): hashes to store on the index, if not specified a random one is created
     Returns:
-        indexclient.client.Document: the document jsut created
+        indexclient.client.Document: the document just created
     """
 
     did = str(uuid.uuid4()) if did is None else did
@@ -122,7 +122,8 @@ def create_random_index_version(index_client, did, version_did=None, version=Non
     Shorthand for creating a dummy version of an existing index, use wisely as it does not assume any versioning
     scheme and null versions are allowed
     Args:
-        index_client (IndexClient):
+        index_client (IndexClient): pytest fixture for index_client
+        passed from actual test functions
         did (str): existing member did
         version_did (str): did for the version to be created
         version (str): version number for the version to be created
