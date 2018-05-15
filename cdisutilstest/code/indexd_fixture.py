@@ -107,7 +107,7 @@ def create_random_index(index_client, did=None, version=None, hashes=None):
         did=did,
         hashes=hashes,
         size=random.randint(10, 1000),
-        version=version if version else "",
+        version=version,
         acl=["a", "b"],
         file_name="{}_warning_huge_file.svs".format(did),
         urls=["s3://super-safe.com/{}_warning_huge_file.svs".format(did)],
