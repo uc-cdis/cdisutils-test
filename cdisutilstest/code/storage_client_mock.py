@@ -11,10 +11,11 @@ from storageclient.errors import NotFoundError, RequestError
 
 
 def get_client(config, backend):
-    if backend == 'cleversafe':
+    if backend in ['cleversafe', 'google']:
         return StorageClientMocker(backend)
     else:
         raise NotImplementedError()
+
 
 class StorageClientMocker(object):
     """
