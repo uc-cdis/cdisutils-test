@@ -109,6 +109,7 @@ def create_random_index(index_client, did=None, version=None, hashes=None):
         size=random.randint(10, 1000),
         version=version,
         acl=["a", "b"],
+        rbac="/gen3/programs/a/projects/b",
         file_name="{}_warning_huge_file.svs".format(did),
         urls=["s3://super-safe.com/{}_warning_huge_file.svs".format(did)],
         urls_metadata={"s3://super-safe.com/{}_warning_huge_file.svs".format(did): {"a": "b"}}
@@ -141,6 +142,7 @@ def create_random_index_version(index_client, did, version_did=None, version=Non
         md5_hasher.update(version_did.encode("utf-8"))
 
     data["acl"] = ["ax", "bx"]
+    data["rbac"] = "/gen3/programs/ax/projects/bx"
     data["size"] = random.randint(10, 1000)
     data["hashes"] = {"md5": md5_hasher.hexdigest()}
     data["urls"] = ["s3://super-safe.com/{}_warning_huge_file.svs".format(file_name)]
