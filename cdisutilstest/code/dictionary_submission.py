@@ -36,7 +36,7 @@ def put_entity_from_file(client, path, submitter, submission_path, data_dir,
                          validate=True):
     with open(os.path.join(data_dir, path), 'r') as f:
         entity = f.read()
-    print "entity", entity
+    print("entity", entity)
     r = client.put(submission_path, headers=submitter(submission_path, 'put'), data=entity)
     if validate:
         assert r.status_code == 200, r.data
@@ -45,7 +45,7 @@ def put_entity_from_file(client, path, submitter, submission_path, data_dir,
 def program_creation_endpoint_helper(client, pg_driver, submitter, program, data_dir):
     resp = put_program(client, program, data_dir, auth=submitter)
     assert resp.status_code == 200, resp.data
-    print resp.data
+    print(resp.data)
     resp = client.get('/v0/submission/')
     assert resp.json['links'] == ['/v0/submission/' + program], resp.json
 
@@ -96,7 +96,7 @@ def put_entity_creation_valid_helper(client, pg_driver, submitter, program, proj
 
     request_q.remove('projects')
     
-    print 'request_q: ', request_q
+    print('request_q: ', request_q)
 
     singular_request_q = deque([])
 

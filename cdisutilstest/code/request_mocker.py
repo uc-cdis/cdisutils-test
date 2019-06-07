@@ -3,9 +3,9 @@ Module for mocking and testing of the
 """
 
 from os import path, sys
-from urlparse import urlparse
+from urllib.parse import urlparse
 import json
-from urllib import urlencode
+from urllib.parse import urlencode
 
 
 class RequestMocker(object):
