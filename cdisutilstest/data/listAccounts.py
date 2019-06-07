@@ -8,7 +8,7 @@ values = {
                         {
                             "accessKeyId": "ABABABABABABABABA",
                             "creationDate": "Fri, 12 Aug 2016 16:20:13 +0000",
-                            "secretAccessKey": "BGBUGABUGABUGABUGABUGABUGABUGABU"
+                            "secretAccessKey": "BGBUGABUGABUGABUGABUGABUGABUGABU",
                         }
                     ],
                     "creationDate": "Thu, 11 Aug 2016 18:19:48 +0000",
@@ -23,18 +23,13 @@ values = {
                     "roles": [
                         {
                             "role": "vaultUser",
-                            "vaultPermissions": [
-                                {
-                                    "permission": "owner",
-                                    "vault": 274
-                                }
-                            ]
+                            "vaultPermissions": [{"permission": "owner", "vault": 274}],
                         }
                     ],
                     "timezone": None,
                     "type": "local",
                     "username": None,
-                    "uuid": "PINGAPINGAPINGAPINGAPINGAPINGAPINGA"
+                    "uuid": "PINGAPINGAPINGAPINGAPINGAPINGAPINGA",
                 },
                 {
                     "accessKeys": [],
@@ -47,22 +42,18 @@ values = {
                     "name": "ResponseError",
                     "organization": 1,
                     "privateAccountEnabled": False,
-                    "roles": [
-                        {
-                            "role": "admin"
-                        }
-                    ],
+                    "roles": [{"role": "admin"}],
                     "timezone": None,
                     "type": "local",
                     "username": "admin",
-                    "uuid": "HARHARHARHARHARHARHARHARHHARDY"
+                    "uuid": "HARHARHARHARHARHARHARHARHHARDY",
                 },
                 {
                     "accessKeys": [
                         {
                             "accessKeyId": "MEEEEEHHHHMEEEHHHHHMEEHHHH",
                             "creationDate": "Sun, 02 Apr 2017 19:50:51 +0000",
-                            "secretAccessKey": "PUARGHPUARGHPUARGHPUARGHPUARGH"
+                            "secretAccessKey": "PUARGHPUARGHPUARGHPUARGHPUARGH",
                         }
                     ],
                     "creationDate": "Sun, 02 Apr 2017 19:44:55 +0000",
@@ -78,23 +69,21 @@ values = {
                         {
                             "role": "vaultUser",
                             "vaultPermissions": [
-                                {
-                                    "permission": "readOnly",
-                                    "vault": 274
-                                }
-                            ]
+                                {"permission": "readOnly", "vault": 274}
+                            ],
                         }
                     ],
                     "timezone": None,
                     "type": "local",
                     "username": "perico",
-                    "uuid": "PONGPONGPONGPONGPONGPONGPONGPONGPONGPONG"
-                },                {
+                    "uuid": "PONGPONGPONGPONGPONGPONGPONGPONGPONGPONG",
+                },
+                {
                     "accessKeys": [
                         {
                             "accessKeyId": "MEEEEEHHHHMEEEHHHHHMEEHHHH",
                             "creationDate": "Sun, 02 Apr 2017 19:50:51 +0000",
-                            "secretAccessKey": "PUARGHPUARGHPUARGHPUARGHPUARGH"
+                            "secretAccessKey": "PUARGHPUARGHPUARGHPUARGHPUARGH",
                         }
                     ],
                     "creationDate": "Sun, 02 Apr 2017 19:44:55 +0000",
@@ -110,24 +99,21 @@ values = {
                         {
                             "role": "vaultUser",
                             "vaultPermissions": [
-                                {
-                                    "permission": "readOnly",
-                                    "vault": 274
-                                }
-                            ]
+                                {"permission": "readOnly", "vault": 274}
+                            ],
                         }
                     ],
                     "timezone": None,
                     "type": "local",
                     "username": "perico",
-                    "uuid": "PONGPONGPONGPONGPONGPONGPONGPONGPONGPONG"
+                    "uuid": "PONGPONGPONGPONGPONGPONGPONGPONGPONGPONG",
                 },
                 {
                     "accessKeys": [
                         {
                             "accessKeyId": "MEEEEEHHHHMEEEHHHHHMEEHHHH",
                             "creationDate": "Sun, 02 Apr 2017 19:50:51 +0000",
-                            "secretAccessKey": "PUARGHPUARGHPUARGHPUARGHPUARGH"
+                            "secretAccessKey": "PUARGHPUARGHPUARGHPUARGHPUARGH",
                         }
                     ],
                     "creationDate": "Sun, 02 Apr 2017 19:44:55 +0000",
@@ -143,24 +129,21 @@ values = {
                         {
                             "role": "vaultUser",
                             "vaultPermissions": [
-                                {
-                                    "permission": "readOnly",
-                                    "vault": 274
-                                }
-                            ]
+                                {"permission": "readOnly", "vault": 274}
+                            ],
                         }
                     ],
                     "timezone": None,
                     "type": "local",
                     "username": "perico",
-                    "uuid": "PONGPONGPONGPONGPONGPONGPONGPONGPONGPONG"
+                    "uuid": "PONGPONGPONGPONGPONGPONGPONGPONGPONGPONG",
                 },
                 {
                     "accessKeys": [
                         {
                             "accessKeyId": "YYYYYYYYYYYYYYY",
                             "creationDate": "Mon, 22 Aug 2016 16:11:39 +0000",
-                            "secretAccessKey": "amerameramerameramerameramaeramerae"
+                            "secretAccessKey": "amerameramerameramerameramaeramerae",
                         }
                     ],
                     "creationDate": "Mon, 22 Aug 2016 16:11:11 +0000",
@@ -175,26 +158,21 @@ values = {
                     "roles": [
                         {
                             "role": "vaultUser",
-                            "vaultPermissions": [
-                                {
-                                    "permission": "owner",
-                                    "vault": 274
-                                }
-                            ]
+                            "vaultPermissions": [{"permission": "owner", "vault": 274}],
                         }
                     ],
                     "timezone": None,
                     "type": "local",
                     "username": None,
-                    "uuid": "d530ed44-56f5-45bb-a228-0871de9b06c2"
-                }
+                    "uuid": "d530ed44-56f5-45bb-a228-0871de9b06c2",
+                },
             ]
         },
         "responseHeader": {
             "now": 1491964205437,
             "requestId": "WO2RLQoQgF4AAAZwj98AAAC-",
-            "status": "ok"
+            "status": "ok",
         },
-        "responseStatus": "ok"
-    }
+        "responseStatus": "ok",
+    },
 }

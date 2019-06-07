@@ -3,9 +3,8 @@ Module for mocking and testing of the
 """
 
 from os import path, sys
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlencode
 import json
-from urllib.parse import urlencode
 
 
 class RequestMocker(object):
@@ -23,16 +22,14 @@ class RequestMocker(object):
         parsed_url = urlparse(url)
         resource_file = parsed_url.path.split('1.0/')[-1]
         resource_file = resource_file.split('.')[0]
-        if data != None:
-            parsed_data = urlencode(data)
+        if data:
+            params = urlencode(data)
         else:
-            parsed_data = None
-        parsed_query = parsed_url.query
+            params = parsed_url.query
         resp_dict = self.files[resource_file]
-        if parsed_data != None:
+        if params:
+            parsed_data = frozenset(params.split("&"))  # ignore param order
             response = Response(int(resp_dict[parsed_data]['status_code']), json.dumps(resp_dict[parsed_data]['text']))
-        elif parsed_query != '':
-            response = Response(int(resp_dict[parsed_query]['status_code']), json.dumps(resp_dict[parsed_query]['text']))
         else:
             response = Response(int(resp_dict['status_code']), json.dumps(resp_dict['text']))
         return response

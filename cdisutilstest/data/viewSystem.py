@@ -1,5 +1,5 @@
 values = {
-    "itemType=account&id=0": {
+    frozenset(("itemType=account", "id=0")): {
         "status_code": "200",
         "text": {
             "responseData": {
@@ -19,17 +19,17 @@ values = {
                 "storagePoolGroups": [],
                 "storagePools": [],
                 "tags": [],
-                "vaults": []
+                "vaults": [],
             },
             "responseHeader": {
                 "now": 1492026962655,
                 "requestId": "WO6GUgoQgF4AAAZwypkAAAC4",
-                "status": "ok"
+                "status": "ok",
             },
-            "responseStatus": "ok"
-        }
+            "responseStatus": "ok",
+        },
     },
-    "itemType=account&id=72": {
+    frozenset(("itemType=account", "id=72")): {
         "status_code": "200",
         "text": {
             "responseData": {
@@ -40,7 +40,7 @@ values = {
                             {
                                 "accessKeyId": "XXXXXXXXXXXXXXXXXXXXXX",
                                 "creationDate": "Thu, 30 Mar 2017 15:26:07 +0000",
-                                "secretAccessKey": "YYYYYYYYYYYYYYYYYYYYYYYYYYYYY"
+                                "secretAccessKey": "YYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
                             }
                         ],
                         "creationDate": "Thu, 30 Mar 2017 15:24:17 +0000",
@@ -53,32 +53,21 @@ values = {
                         "organization": 1,
                         "privateAccountEnabled": False,
                         "roles": [
-                            {
-                                "role": "admin"
-                            },
-                            {
-                                "role": "securityAdmin"
-                            },
-                            {
-                                "role": "operator"
-                            },
-                            {
-                                "role": "vaultProvisioner"
-                            },
+                            {"role": "admin"},
+                            {"role": "securityAdmin"},
+                            {"role": "operator"},
+                            {"role": "vaultProvisioner"},
                             {
                                 "role": "vaultUser",
                                 "vaultPermissions": [
-                                    {
-                                        "permission": "owner",
-                                        "vault": 274
-                                    }
-                                ]
-                            }
+                                    {"permission": "owner", "vault": 274}
+                                ],
+                            },
                         ],
                         "timezone": None,
                         "type": "local",
                         "username": "testUsername",
-                        "uuid": "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEEE"
+                        "uuid": "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEEE",
                     }
                 ],
                 "cabinets": [],
@@ -95,17 +84,17 @@ values = {
                 "storagePoolGroups": [],
                 "storagePools": [],
                 "tags": [],
-                "vaults": []
+                "vaults": [],
             },
             "responseHeader": {
                 "now": 1491594577080,
                 "requestId": "WOftUAoQgF4AAHYXwR8AAACc",
-                "status": "ok"
+                "status": "ok",
             },
-            "responseStatus": "ok"
-        }
-    },    
-    "itemType=account&id=12": {
+            "responseStatus": "ok",
+        },
+    },
+    frozenset(("itemType=account", "id=12")): {
         "status_code": "200",
         "text": {
             "responseData": {
@@ -116,7 +105,7 @@ values = {
                             {
                                 "accessKeyId": "YYYYYYYYYYYYYYY",
                                 "creationDate": "Thu, 30 Mar 2017 15:26:07 +0000",
-                                "secretAccessKey": "YYYYYYYYYYYYYYYYYYYYYYYYYYYYY"
+                                "secretAccessKey": "YYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
                             }
                         ],
                         "creationDate": "Thu, 30 Mar 2017 15:24:17 +0000",
@@ -129,32 +118,21 @@ values = {
                         "organization": 1,
                         "privateAccountEnabled": False,
                         "roles": [
-                            {
-                                "role": "admin"
-                            },
-                            {
-                                "role": "securityAdmin"
-                            },
-                            {
-                                "role": "operator"
-                            },
-                            {
-                                "role": "vaultProvisioner"
-                            },
+                            {"role": "admin"},
+                            {"role": "securityAdmin"},
+                            {"role": "operator"},
+                            {"role": "vaultProvisioner"},
                             {
                                 "role": "vaultUser",
                                 "vaultPermissions": [
-                                    {
-                                        "permission": "owner",
-                                        "vault": 274
-                                    }
-                                ]
-                            }
+                                    {"permission": "owner", "vault": 274}
+                                ],
+                            },
                         ],
                         "timezone": None,
                         "type": "local",
                         "username": "testUsername",
-                        "uuid": "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEEE"
+                        "uuid": "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEEE",
                     }
                 ],
                 "cabinets": [],
@@ -171,17 +149,17 @@ values = {
                 "storagePoolGroups": [],
                 "storagePools": [],
                 "tags": [],
-                "vaults": []
+                "vaults": [],
             },
             "responseHeader": {
                 "now": 1491594577080,
                 "requestId": "WOftUAoQgF4AAHYXwR8AAACc",
-                "status": "ok"
+                "status": "ok",
             },
-            "responseStatus": "ok"
-        }
+            "responseStatus": "ok",
+        },
     },
-    "itemType=vault&id=274": {
+    frozenset(("itemType=vault", "id=274")): {
         "status_code": 200,
         "text": {
             "responseData": {
@@ -207,24 +185,16 @@ values = {
                         "accessPermissions": [
                             {
                                 "permission": "readOnly",
-                                "principal": {
-                                    "id": 95,
-                                    "type": "account"
-                                },
-                                "role": "vaultUser"
+                                "principal": {"id": 95, "type": "account"},
+                                "role": "vaultUser",
                             },
                             {
                                 "permission": "owner",
-                                "principal": {
-                                    "id": 12,
-                                    "type": "account"
-                                },
-                                "role": "vaultUser"
-                            }
+                                "principal": {"id": 12, "type": "account"},
+                                "role": "vaultUser",
+                            },
                         ],
-                        "accessPools": [
-                            1
-                        ],
+                        "accessPools": [1],
                         "alertLevel": 8,
                         "allotment": 1,
                         "allowedIps": [],
@@ -236,13 +206,7 @@ values = {
                         "externalAccessHost": None,
                         "fileSystem": None,
                         "generations": [
-                            {
-                                "seq": 0,
-                                "storagePool": 1,
-                                "storagePools": [
-                                    1
-                                ]
-                            }
+                            {"seq": 0, "storagePool": 1, "storagePools": [1]}
                         ],
                         "hardQuota": 1099511627776,
                         "id": 274,
@@ -269,19 +233,19 @@ values = {
                         "vaultType": "object",
                         "versioning": "disabled",
                         "width": 9,
-                        "writeThreshold": 7
+                        "writeThreshold": 7,
                     }
-                ]
+                ],
             },
             "responseHeader": {
                 "now": 1491595126078,
                 "requestId": "WOfvdQoQgF4AAHYXwZMAAAC3",
-                "status": "ok"
+                "status": "ok",
             },
-            "responseStatus": "ok"
-        }
+            "responseStatus": "ok",
+        },
     },
-    "itemType=account&id=95": {
+    frozenset(("itemType=account", "id=95")): {
         "status_code": "200",
         "text": {
             "responseData": {
@@ -292,7 +256,7 @@ values = {
                             {
                                 "accessKeyId": "XXXXXXXXXXXXXX",
                                 "creationDate": "Thu, 30 Mar 2017 15:26:07 +0000",
-                                "secretAccessKey": "YYYYYYYYYYYYYYYYYYYYYYYYYYYYY"
+                                "secretAccessKey": "YYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
                             }
                         ],
                         "creationDate": "Thu, 30 Mar 2017 15:24:17 +0000",
@@ -305,32 +269,21 @@ values = {
                         "organization": 1,
                         "privateAccountEnabled": False,
                         "roles": [
-                            {
-                                "role": "admin"
-                            },
-                            {
-                                "role": "securityAdmin"
-                            },
-                            {
-                                "role": "operator"
-                            },
-                            {
-                                "role": "vaultProvisioner"
-                            },
+                            {"role": "admin"},
+                            {"role": "securityAdmin"},
+                            {"role": "operator"},
+                            {"role": "vaultProvisioner"},
                             {
                                 "role": "vaultUser",
                                 "vaultPermissions": [
-                                    {
-                                        "permission": "owner",
-                                        "vault": 274
-                                    }
-                                ]
-                            }
+                                    {"permission": "owner", "vault": 274}
+                                ],
+                            },
                         ],
                         "timezone": None,
                         "type": "local",
                         "username": "testUsername",
-                        "uuid": "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEEE"
+                        "uuid": "AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEEE",
                     }
                 ],
                 "cabinets": [],
@@ -347,18 +300,18 @@ values = {
                 "storagePoolGroups": [],
                 "storagePools": [],
                 "tags": [],
-                "vaults": []
+                "vaults": [],
             },
             "responseHeader": {
                 "now": 1491594577080,
                 "requestId": "WOftUAoQgF4AAHYXwR8AAACc",
-                "status": "ok"
+                "status": "ok",
             },
-            "responseStatus": "ok"
-        }
+            "responseStatus": "ok",
+        },
     },
-    "itemType=account&id=1": {
-    	"status_code": "500",
-	"text": "this is just a test"
-    }
+    frozenset(("itemType=account", "id=1")): {
+        "status_code": "500",
+        "text": "this is just a test",
+    },
 }
