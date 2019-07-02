@@ -2,10 +2,18 @@ from multiprocessing import Process
 
 import pytest
 
-from .indexd_fixture import (IndexClient, MockServer, create_user,
-                            remove_sqlite_files, run_indexd,
-                            clear_database, setup_database,
-                            wait_for_indexd_alive, wait_for_indexd_not_alive)
+from .indexd_fixture import (
+    IndexClient,
+    MockServer,
+    create_user,
+    remove_sqlite_files,
+    run_indexd,
+    clear_database,
+    setup_database,
+    wait_for_indexd_alive,
+    wait_for_indexd_not_alive,
+)
+
 # Note the . in front of indexd_fixtures for more information:
 # https://stackoverflow.com/questions/16981921/relative-imports-in-python-3#16985066
 # Basically the options are:
@@ -13,7 +21,7 @@ from .indexd_fixture import (IndexClient, MockServer, create_user,
 # 2) Some terrible looking relative imports
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope="session")
 def indexd_server():
     """
     Starts the indexd server, and cleans up its mess.
@@ -30,7 +38,7 @@ def indexd_server():
     wait_for_indexd_not_alive(port)
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope="function")
 def indexd_client(indexd_server):
     """
     Returns a IndexClient. This will delete any documents,
@@ -41,6 +49,7 @@ def indexd_client(indexd_server):
     """
     setup_database()
     client = IndexClient(
-        baseurl=indexd_server.baseurl, auth=create_user('admin', 'admin'))
+        baseurl=indexd_server.baseurl, auth=create_user("admin", "admin")
+    )
     yield client
     clear_database()

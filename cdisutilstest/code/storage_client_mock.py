@@ -11,7 +11,7 @@ from storageclient.errors import NotFoundError, RequestError
 
 
 def get_client(config, backend):
-    if backend in ['cleversafe', 'google']:
+    if backend in ["cleversafe", "google"]:
         return StorageClientMocker(backend)
     else:
         raise NotImplementedError()
@@ -24,6 +24,7 @@ class StorageClientMocker(object):
     supposed to be modifiable by the very calls
     it is mocking
     """
+
     def __init__(self, provider, users={}, buckets={}, permisions={}):
         """
         users = {'Name1': User1, 'Name2': User2...}
@@ -96,7 +97,9 @@ class StorageClientMocker(object):
         """
         try:
             the_user = self.users[name]
-            the_user.keys = [key for key in the_user.keys if key['access_key'] != access_key]
+            the_user.keys = [
+                key for key in the_user.keys if key["access_key"] != access_key
+            ]
         except KeyError as e:
             raise e
 
@@ -115,10 +118,13 @@ class StorageClientMocker(object):
         """
         try:
             the_user = self.users[name]
-            access_key = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(8))
-            secret_key = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(16))
-            new_key = {'access_key': access_key,
-                       'secret_key': secret_key}
+            access_key = "".join(
+                random.choice(string.ascii_uppercase + string.digits) for _ in range(8)
+            )
+            secret_key = "".join(
+                random.choice(string.ascii_uppercase + string.digits) for _ in range(16)
+            )
+            new_key = {"access_key": access_key, "secret_key": secret_key}
             the_user.keys.append(new_key)
             return new_key
         except KeyError as e:
@@ -193,7 +199,7 @@ class StorageClientMocker(object):
         elif not user in self.users.keys():
             raise NotFoundError("Bucket not found")
         else:
-            self.users[user].permissions[bucket]=access
+            self.users[user].permissions[bucket] = access
 
     def delete_bucket_acl(self, bucket, user):
         """
@@ -209,7 +215,7 @@ class StorageClientMocker(object):
         elif not user in self.users.keys():
             raise NotFoundError("Bucket not found")
         else:
-            self.users[user].permissions[bucket]=[]
+            self.users[user].permissions[bucket] = []
 
     def delete_bucket(self, bucket_name):
         try:

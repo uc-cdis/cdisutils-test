@@ -17,7 +17,7 @@ from indexd.alias.drivers.alchemy import Base as alias_base
 
 
 def wait_for_indexd_alive(port):
-    url = 'http://localhost:{}'.format(port)
+    url = "http://localhost:{}".format(port)
     try:
         requests.get(url)
     except requests.ConnectionError:
@@ -27,7 +27,7 @@ def wait_for_indexd_alive(port):
 
 
 def wait_for_indexd_not_alive(port):
-    url = 'http://localhost:{}'.format(port)
+    url = "http://localhost:{}".format(port)
     try:
         requests.get(url)
     except requests.ConnectionError:
@@ -38,10 +38,10 @@ def wait_for_indexd_not_alive(port):
 
 def run_indexd(port):
     app = get_app()
-    app.run(host='localhost', port=port, debug=False)
+    app.run(host="localhost", port=port, debug=False)
 
 
-def create_user(username, password, settings_key='auth'):
+def create_user(username, password, settings_key="auth"):
     driver = settings[settings_key]
     driver.add(username, password)
     return (username, password)
@@ -49,7 +49,7 @@ def create_user(username, password, settings_key='auth'):
 
 # TODO use tmpdir
 def remove_sqlite_files():
-    files = ['alias.sq3', 'index.sq3', 'auth.sq3']
+    files = ["alias.sq3", "index.sq3", "auth.sq3"]
     for f in files:
         if os.path.exists(f):
             os.remove(f)
@@ -62,15 +62,15 @@ def setup_database():
 
 
 def clear_database():
-    with settings['config']['INDEX']['driver'].session as session:
+    with settings["config"]["INDEX"]["driver"].session as session:
         for model in index_base.__subclasses__():
             session.query(model).delete()
 
-    with settings['config']['ALIAS']['driver'].session as session:
+    with settings["config"]["ALIAS"]["driver"].session as session:
         for model in alias_base.__subclasses__():
             session.query(model).delete()
 
-    with settings['auth'].session as session:
+    with settings["auth"].session as session:
         for model in auth_base.__subclasses__():
             session.query(model).delete()
 
@@ -78,7 +78,7 @@ def clear_database():
 class MockServer(object):
     def __init__(self, port):
         self.port = port
-        self.baseurl = 'http://localhost:{}'.format(port)
+        self.baseurl = "http://localhost:{}".format(port)
 
 
 def create_random_index(index_client, did=None, version=None, hashes=None):
@@ -101,7 +101,7 @@ def create_random_index(index_client, did=None, version=None, hashes=None):
     if not hashes:
         md5_hasher = hashlib.md5()
         md5_hasher.update(did.encode("utf-8"))
-        hashes = {'md5': md5_hasher.hexdigest()}
+        hashes = {"md5": md5_hasher.hexdigest()}
 
     doc = index_client.create(
         did=did,
@@ -112,7 +112,9 @@ def create_random_index(index_client, did=None, version=None, hashes=None):
         authz=["/gen3/programs/a/projects/b"],
         file_name="{}_warning_huge_file.svs".format(did),
         urls=["s3://super-safe.com/{}_warning_huge_file.svs".format(did)],
-        urls_metadata={"s3://super-safe.com/{}_warning_huge_file.svs".format(did): {"a": "b"}}
+        urls_metadata={
+            "s3://super-safe.com/{}_warning_huge_file.svs".format(did): {"a": "b"}
+        },
     )
 
     return doc
@@ -148,7 +150,9 @@ def create_random_index_version(index_client, did, version_did=None, version=Non
     data["urls"] = ["s3://super-safe.com/{}_warning_huge_file.svs".format(file_name)]
     data["form"] = "object"
     data["file_name"] = "{}_warning_huge_file.svs".format(file_name)
-    data["urls_metadata"] = {"s3://super-safe.com/{}_warning_huge_file.svs".format(did): {"a": "b"}}
+    data["urls_metadata"] = {
+        "s3://super-safe.com/{}_warning_huge_file.svs".format(did): {"a": "b"}
+    }
 
     if version:
         data["version"] = version

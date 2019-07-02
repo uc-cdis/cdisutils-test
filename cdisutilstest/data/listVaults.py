@@ -29,18 +29,12 @@ values = {
                                 "allottedSize": 2198827008,
                                 "estimateUsableTotalLogicalSizeFromStorage": 576578734612479,
                                 "estimateUsableUsedLogicalSizeFromStorage": 1202370930,
-                                "generations": [
-                                    {
-                                        "generation": {
-                                            "sequence": 0
-                                        }
-                                    }
-                                ],
+                                "generations": [{"generation": {"sequence": 0}}],
                                 "id": 1,
                                 "name": "kh27-storage-pool",
                                 "usableSize": 576578734612479,
                                 "usedLogicalSizeFromStorage": 2164267674,
-                                "usedPhysicalSizeFromStorage": 2198827008
+                                "usedPhysicalSizeFromStorage": 2198827008,
                             }
                         }
                     ],
@@ -52,8 +46,9 @@ values = {
                     "uuid": "OOOOOOOO-WWWW-AAAA-FFFF-HHVVVAAJJJJ",
                     "vaultPurpose": "standard",
                     "width": 9,
-                    "writeThreshold": 7
-                },                {
+                    "writeThreshold": 7,
+                },
+                {
                     "alertLevel": 8,
                     "allotmentQuota": None,
                     "allotmentUsage": 676824033300480,
@@ -79,18 +74,12 @@ values = {
                                 "allottedSize": 0,
                                 "estimateUsableTotalLogicalSizeFromStorage": 576577513041919,
                                 "estimateUsableUsedLogicalSizeFromStorage": 0,
-                                "generations": [
-                                    {
-                                        "generation": {
-                                            "sequence": 0
-                                        }
-                                    }
-                                ],
+                                "generations": [{"generation": {"sequence": 0}}],
                                 "id": 1,
                                 "name": "2-storage-pool",
                                 "usableSize": 576577513041919,
                                 "usedLogicalSizeFromStorage": 0,
-                                "usedPhysicalSizeFromStorage": 0
+                                "usedPhysicalSizeFromStorage": 0,
                             }
                         }
                     ],
@@ -102,7 +91,7 @@ values = {
                     "uuid": "OOOOOOOO-WWWW-AAAA-FFFF-HHHHAAAAJJJV",
                     "vaultPurpose": "standard",
                     "width": 9,
-                    "writeThreshold": 7
+                    "writeThreshold": 7,
                 },
                 {
                     "alertLevel": 8,
@@ -130,18 +119,12 @@ values = {
                                 "allottedSize": 0,
                                 "estimateUsableTotalLogicalSizeFromStorage": 576577513041919,
                                 "estimateUsableUsedLogicalSizeFromStorage": 0,
-                                "generations": [
-                                    {
-                                        "generation": {
-                                            "sequence": 0
-                                        }
-                                    }
-                                ],
+                                "generations": [{"generation": {"sequence": 0}}],
                                 "id": 1,
                                 "name": "2-storage-pool",
                                 "usableSize": 576577513041919,
                                 "usedLogicalSizeFromStorage": 0,
-                                "usedPhysicalSizeFromStorage": 0
+                                "usedPhysicalSizeFromStorage": 0,
                             }
                         }
                     ],
@@ -153,7 +136,7 @@ values = {
                     "uuid": "OOOOOOOO-WWWW-AAAA-FFFF-HHHHAAAAJJJV",
                     "vaultPurpose": "standard",
                     "width": 9,
-                    "writeThreshold": 7
+                    "writeThreshold": 7,
                 },
                 {
                     "alertLevel": 8,
@@ -181,18 +164,12 @@ values = {
                                 "allottedSize": 14206058496,
                                 "estimateUsableTotalLogicalSizeFromStorage": 576585405296639,
                                 "estimateUsableUsedLogicalSizeFromStorage": 7867593305,
-                                "generations": [
-                                    {
-                                        "generation": {
-                                            "sequence": 0
-                                        }
-                                    }
-                                ],
+                                "generations": [{"generation": {"sequence": 0}}],
                                 "id": 1,
                                 "name": "1-storage-pool",
                                 "usableSize": 576585405296639,
                                 "usedLogicalSizeFromStorage": 14161667949,
-                                "usedPhysicalSizeFromStorage": 14206058496
+                                "usedPhysicalSizeFromStorage": 14206058496,
                             }
                         }
                     ],
@@ -204,15 +181,15 @@ values = {
                     "uuid": "OOOOOOOO-WWWW-AAAA-FFFF-HHHHAAAAJJJJ",
                     "vaultPurpose": "standard",
                     "width": 9,
-                    "writeThreshold": 7
-                }
+                    "writeThreshold": 7,
+                },
             ]
         },
         "responseHeader": {
             "now": 1491951214229,
             "requestId": "WO1ebgoQgF4AAAZwhZkAAACf",
-            "status": "ok"
+            "status": "ok",
         },
-        "responseStatus": "ok"
-    }
+        "responseStatus": "ok",
+    },
 }

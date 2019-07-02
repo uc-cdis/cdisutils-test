@@ -1,56 +1,56 @@
 values = {
-    "action=add&id=95": {
+    frozenset(("action=add", "id=95")): {
         "status_code": "200",
         "text": {
             "responseData": {
                 "accessKeyId": "XXXXXXXXXXXXXX",
                 "creationDate": 1492034247291,
                 "id": 76,
-                "secretAccessKey": "AAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHNNNNNN"
+                "secretAccessKey": "AAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHNNNNNN",
             },
             "responseHeader": {
                 "now": 1492034247299,
                 "requestId": "WO6ixwoQgF4AAAZw1cQAAACo",
-                "status": "ok"
+                "status": "ok",
             },
-            "responseStatus": "ok"
-        }
+            "responseStatus": "ok",
+        },
     },
-    "action=add&id=14": {
+    frozenset(("action=add", "id=14")): {
         "status_code": "404",
         "text": {
             "responseData": {
                 "accessKeyId": "ZZZZZZZZZZZZZZZ",
                 "creationDate": 1492034247291,
                 "id": 76,
-                "secretAccessKey": "AAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHNNNNNN"
+                "secretAccessKey": "AAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHNNNNNN",
             },
             "responseHeader": {
                 "now": 1492034247299,
                 "requestId": "WO6ixwoQgF4AAAZw1cQAAACo",
-                "status": "ok"
+                "status": "ok",
             },
-            "responseStatus": "ok"
-        }
+            "responseStatus": "ok",
+        },
     },
-    "action=remove&id=95&accessKeyId=XXXXXXXXXXXXXX": {
+    frozenset(("action=remove", "id=95", "accessKeyId=XXXXXXXXXXXXXX")): {
         "status_code": "200",
         "text": {
             "responseData": {},
             "responseHeader": {
                 "now": 1492036702660,
                 "requestId": "WO6sXgoQgF4AAAZw2B8AAACQ",
-                "status": "ok"
+                "status": "ok",
             },
-            "responseStatus": "ok"
-        }
+            "responseStatus": "ok",
+        },
     },
-    "action=remove&id=95&accessKeyId=YYYYYYYYYYYYYYY":{
-	"status_code": "404",
-	"text": "Error when retrieving the key"
+    frozenset(("action=remove", "id=95", "accessKeyId=YYYYYYYYYYYYYYY")): {
+        "status_code": "404",
+        "text": "Error when retrieving the key",
     },
-    "action=remove&id=12&accessKeyId=YYYYYYYYYYYYYYY":{
-	"status_code": "404",
-	"text": "Error when retrieving the key"
-    }
+    frozenset(("action=remove", "id=12", "accessKeyId=YYYYYYYYYYYYYYY")): {
+        "status_code": "404",
+        "text": "Error when retrieving the key",
+    },
 }
