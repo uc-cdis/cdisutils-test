@@ -1,7 +1,7 @@
 """
 Functions for testing the validity of example files for a data dictionary.
-Import and call these functions in the data dictionary's repo with correct 
-parameters. 
+Import and call these functions in the data dictionary's repo with correct
+parameters.
 Requires fixtures imported from gdcapi
 """
 
