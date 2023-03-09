@@ -115,6 +115,7 @@ def create_random_index(index_client, did=None, version=None, hashes=None):
         urls_metadata={
             "s3://super-safe.com/{}_warning_huge_file.svs".format(did): {"a": "b"}
         },
+        description="a description",
     )
 
     return doc
@@ -153,6 +154,7 @@ def create_random_index_version(index_client, did, version_did=None, version=Non
     data["urls_metadata"] = {
         "s3://super-safe.com/{}_warning_huge_file.svs".format(did): {"a": "b"}
     }
+    data["description"] = "a description"
 
     if version:
         data["version"] = version
