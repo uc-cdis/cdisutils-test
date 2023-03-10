@@ -4,7 +4,7 @@ Test data and reusable non-specific test code
 
 ## fixtures
 
-Fixtures allow us to reuse similiar code between many tests.
+Fixtures allow us to reuse similar code between many tests.
 Read all about it [here](https://docs.pytest.org/en/latest/fixture.html)
 
 ### Indexd

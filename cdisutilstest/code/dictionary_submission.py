@@ -77,7 +77,6 @@ def project_creation_endpoint_helper(
 def put_entity_creation_valid_helper(
     client, pg_driver, submitter, program, project, data_dir, schema_path
 ):
-
     put_program_project(client, program, project, data_dir, auth=submitter)
 
     entities = os.listdir(schema_path)
